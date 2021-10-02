@@ -111,8 +111,8 @@ app_context.push()
 
 
 api = Api(app)
-api.add_resource(HealthCheck, "/healtchek")
-api.add_resource(Cobros, "/paciente/<int:id_paciente>/cobros")
+api.add_resource(HealthCheck, "caja/healtchek")
+api.add_resource(Cobros, "/caja/paciente/<int:id_paciente>")
 
 if __name__ == '__main__':
     app.run()
