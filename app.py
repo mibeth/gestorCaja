@@ -85,7 +85,6 @@ def firmaHash(contenido, usuarioId):
     return hash_object.hexdigest()
 
 class HealthCheck(Resource):    
-
     def get(self):
         data={
             "echo" : "ok"
@@ -111,7 +110,7 @@ app_context.push()
 
 
 api = Api(app)
-api.add_resource(HealthCheck, "caja/healthcheck")
+api.add_resource(HealthCheck, "/caja/healthcheck")
 api.add_resource(Cobros, "/caja/paciente/<int:id_paciente>")
 
 if __name__ == '__main__':
